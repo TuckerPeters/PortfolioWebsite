@@ -135,6 +135,13 @@
     </div>
   </section>
   
+  <!-- Contact CTA Section -->
+  <section class="contact-cta">
+    <h2>Let's Work Together</h2>
+    <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
+    <Link to="/contact" class="cta-button primary">Get In Touch</Link>
+  </section>
+
   <!-- Hire Me Section -->
   <section class="hire-me-section">
     <div class="hire-me-content">
@@ -143,13 +150,6 @@
       <p>I can build a custom website tailored to your personal brand or business needs. From portfolio sites to complex web applications — I've got you covered.</p>
       <Link to="/contact" class="hire-me-button">Hire Me To Build Your Website</Link>
     </div>
-  </section>
-
-  <!-- Contact CTA Section -->
-  <section class="contact-cta">
-    <h2>Let's Work Together</h2>
-    <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
-    <Link to="/contact" class="cta-button primary">Get In Touch</Link>
   </section>
 </div>
 

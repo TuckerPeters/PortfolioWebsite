@@ -42,14 +42,11 @@
     },
     {
       id: 3,
-      company: "AICloaker",
-      title: "Lead Developer",
+      company: "AI Cloaker",
+      title: "Co-founder & Co-developer",
       period: "2023 - Present",
       description: [
-        "Designed and developed a professional Svelte template for web developers",
-        "Implemented streamlined starting points for building web applications",
-        "Optimized performance and focused on developer experience",
-        "Provided documentation and support for template users"
+        "Cofounder and co-developer with Graham Zemel"
       ],
       skills: ["Svelte", "Web Development", "UI/UX Design", "Documentation", "Technical Support"]
     }
@@ -62,7 +59,7 @@
       institution: "William & Mary",
       degree: "Bachelor of Science in Computer Science",
       concentration: "AI, Machine Learning, and Big Data",
-      period: "2020 - 2024",
+      period: "2024 - 2028",
       details: [
         "Relevant coursework: Machine Learning, Artificial Intelligence, Data Structures, Algorithms"
       ]
@@ -85,12 +82,6 @@
     <p>My professional background and technical expertise</p>
   </section>
   
-  <section class="resume-download">
-    <a href="/Condensed Resumé - Google Docs.pdf" target="_blank" class="resume-button">
-      <span class="resume-icon"></span>
-      Download Full Resume
-    </a>
-  </section>
 
   <div class="experience-layout">
     <div class="main-column">
@@ -106,7 +97,6 @@
                 <div class="experience-header">
                   <h3>{experience.title}</h3>
                   <span class="company">{experience.company}</span>
-                  <span class="period">{experience.period}</span>
                 </div>
                 
                 <ul class="experience-details">
@@ -138,7 +128,6 @@
                 <div class="experience-header">
                   <h3>{edu.institution}</h3>
                   <span class="company">{edu.degree}</span>
-                  <span class="period">{edu.period}</span>
                 </div>
                 
                 <div class="education-concentration">

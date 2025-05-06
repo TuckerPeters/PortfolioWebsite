@@ -15,7 +15,7 @@
     email: "tuckerpeters@genedu.co",
     linkedIn: "https://www.linkedin.com/in/tucker-peters/",
     github: "https://github.com/TuckerPeters",
-    location: "Williamsburg, VA"
+    location: "Williamsburg, VA | New York, NY"
   };
   
   const faqItems = [
@@ -229,16 +229,6 @@
         </div>
       </div>
       
-      <div class="resume-download-card">
-        <div class="resume-content">
-          <h3>Download My Resume</h3>
-          <p>Get a complete overview of my skills and experience.</p>
-        </div>
-        <a href="/Condensed Resumé - Google Docs.pdf" target="_blank" class="resume-button">
-          <span class="download-icon"></span>
-          Download PDF
-        </a>
-      </div>
     </div>
   </section>
 
