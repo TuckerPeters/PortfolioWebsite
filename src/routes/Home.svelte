@@ -169,6 +169,13 @@
     align-items: center;
     position: relative;
     padding: 0 2rem;
+    
+    @media (max-width: 768px) {
+      height: auto;
+      min-height: 500px;
+      padding-top: 2rem;
+      padding-bottom: 4rem;
+    }
   }
   
   .hero-content {
@@ -202,7 +209,7 @@
       }
       
       @media (max-width: 480px) {
-        font-size: 2.75rem;
+        font-size: 2.5rem;
       }
     }
     
@@ -215,6 +222,11 @@
       
       @media (max-width: 768px) {
         font-size: 1.5rem;
+      }
+      
+      @media (max-width: 480px) {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
       }
     }
     
@@ -229,6 +241,11 @@
       @media (max-width: 900px) {
         margin-left: auto;
         margin-right: auto;
+      }
+      
+      @media (max-width: 480px) {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
       }
     }
   }
@@ -316,9 +333,17 @@
     @media (max-width: 900px) {
       justify-content: center;
     }
+    
+    @media (max-width: 480px) {
+      flex-direction: column;
+      gap: 0.75rem;
+      width: 100%;
+      max-width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   
-    
   .hero-button {
     display: inline-block;
     padding: 12px 24px;
@@ -360,6 +385,9 @@
     
     @media (max-width: 480px) {
       width: 100%;
+      min-width: unset;
+      padding: 10px 20px;
+      margin-bottom: 0;
     }
   }
   
@@ -491,6 +519,16 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 2rem;
+    
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
   }
   
   .skill-card {
@@ -515,6 +553,14 @@
       font-weight: 600;
       color: var(--text-color);
       text-align: center;
+    }
+    
+    @media (max-width: 480px) {
+      padding: 1.25rem 1rem;
+      
+      h4 {
+        font-size: 1rem;
+      }
     }
   }
   
@@ -551,10 +597,12 @@
     
     @media (max-width: 768px) {
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
     }
     
     @media (max-width: 480px) {
       grid-template-columns: 1fr;
+      gap: 1.5rem;
     }
   }
   
@@ -578,6 +626,10 @@
         opacity: 1;
       }
     }
+    
+    @media (max-width: 480px) {
+      max-width: 100%;
+    }
   }
   
   .project-image {
@@ -586,6 +638,10 @@
     overflow: hidden;
     background-color: var(--card-bg);
     border-bottom: 1px solid var(--border-color);
+    
+    @media (max-width: 480px) {
+      height: 180px;
+    }
     
     &::after {
       content: '';
@@ -693,6 +749,15 @@
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid var(--border-color);
     
+    @media (max-width: 768px) {
+      padding: 2rem;
+    }
+    
+    @media (max-width: 480px) {
+      padding: 1.5rem;
+      margin: 0 0.5rem;
+    }
+    
     h2 {
       font-size: 2.5rem;
       font-weight: 700;
@@ -702,6 +767,11 @@
       @media (max-width: 768px) {
         font-size: 2rem;
       }
+      
+      @media (max-width: 480px) {
+        font-size: 1.75rem;
+        margin: 1rem 0;
+      }
     }
     
     p {
@@ -710,6 +780,12 @@
       max-width: 700px;
       margin: 0 auto 2rem;
       color: var(--text-muted);
+      
+      @media (max-width: 480px) {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+      }
     }
   }
   
@@ -766,6 +842,15 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     background-image: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(79, 70, 229, 0.05) 100%);
     
+    @media (max-width: 768px) {
+      padding: 3rem 1.5rem;
+    }
+    
+    @media (max-width: 480px) {
+      padding: 2.5rem 1rem;
+      margin: 1rem;
+    }
+    
     h2 {
       font-size: 2.5rem;
       font-weight: 700;
@@ -779,6 +864,11 @@
       @media (max-width: 768px) {
         font-size: 2rem;
       }
+      
+      @media (max-width: 480px) {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+      }
     }
     
     p {
@@ -787,6 +877,11 @@
       margin: 0 auto 2rem;
       color: var(--text-color);
       opacity: 0.8;
+      
+      @media (max-width: 480px) {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
     }
     
     .cta-button {
