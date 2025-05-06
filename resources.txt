@@ -1,0 +1,45 @@
+GenEdu.co
+aiclubwm.com
+https://aicloaker.com/
+https://github.com/TuckerPeters/StandardWebTemplate
+https://habitsofmindai.netlify.app/
+https://www.linkedin.com/in/tucker-peters/
+
+
+1. GenEdu.co
+GenEdu is an AI-powered educational platform designed to enhance learning through personalized tools. It offers features like the AI Tutor for interactive, real-time tutoring across various subjects, and the Quote Finder to assist in pinpointing key quotes for research. The platform aims to make learning more efficient and accessible by leveraging advanced algorithms to provide tailored educational support. 
+LinkedIn
++2
+LinkedIn
++2
+genedu.co
++2
+genedu.co
++1
+LinkedIn
++1
+genedu.co
+
+2. aiclubwm.com
+This domain is associated with the AI Club at William & Mary, a student-led organization dedicated to advancing artificial intelligence education. The club focuses on fostering a community for students interested in AI, providing resources, workshops, and collaborative opportunities to explore AI technologies. Tucker Peters serves as the Founding President of this club. 
+theaiolympiad.com
++2
+LinkedIn
++2
+wmirc.org
++2
+
+3. aicloaker.com
+AICloaker is a professional Svelte template designed for developers. It provides a streamlined starting point for building web applications using the Svelte framework, focusing on performance and ease of use.
+grabslickai.com
++2
+Oxford English Dictionary
++2
+YouTube
++2
+
+4. StandardWebTemplate by Tucker Peters
+This GitHub repository contains a standard web template developed by Tucker Peters. Built with Svelte, the template serves as a foundational structure for web development projects, offering a clean and organized codebase to expedite the development process.
+
+5. Habits of Mind AI
+Habits of Mind AI is a web application that integrates artificial intelligence to promote and develop effective thinking habits. The platform likely offers tools and resources to help users cultivate cognitive strategies that enhance learning and problem-solving skills.

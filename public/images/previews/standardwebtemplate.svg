@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f1f5f9" />
+  
+  <!-- Browser frame -->
+  <rect x="50" y="50" width="700" height="300" rx="8" ry="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  
+  <!-- Browser header -->
+  <rect x="50" y="50" width="700" height="40" rx="8" ry="8" fill="#f1f5f9"/>
+  <circle cx="80" cy="70" r="6" fill="#f87171"/>
+  <circle cx="105" cy="70" r="6" fill="#fbbf24"/>
+  <circle cx="130" cy="70" r="6" fill="#4ade80"/>
+  
+  <!-- URL bar -->
+  <rect x="160" y="60" width="450" height="20" rx="4" ry="4" fill="#e2e8f0"/>
+  <text x="170" y="75" font-family="Arial" font-size="12" fill="#64748b">https://github.com/TuckerPeters/StandardWebTemplate</text>
+  
+  <!-- Github header -->
+  <rect x="50" y="90" width="700" height="50" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="80" y="122" font-family="Arial" font-weight="bold" font-size="16" fill="#0f172a">TuckerPeters / StandardWebTemplate</text>
+  
+  <!-- Tabs -->
+  <rect x="80" y="140" width="100" height="30" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="105" y="160" font-family="Arial" font-size="12" fill="#64748b">Code</text>
+  
+  <rect x="180" y="140" width="100" height="30" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="200" y="160" font-family="Arial" font-size="12" fill="#0f172a">Issues</text>
+  
+  <rect x="280" y="140" width="100" height="30" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="305" y="160" font-family="Arial" font-size="12" fill="#64748b">Pull Requests</text>
+  
+  <!-- Repository content -->
+  <rect x="80" y="190" width="640" height="40" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="100" y="215" font-family="Arial" font-size="14" fill="#0f172a">src/</text>
+  <text x="600" y="215" font-family="Arial" font-size="12" fill="#64748b">Updated 3 days ago</text>
+  
+  <rect x="80" y="230" width="640" height="40" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="100" y="255" font-family="Arial" font-size="14" fill="#0f172a">public/</text>
+  <text x="600" y="255" font-family="Arial" font-size="12" fill="#64748b">Updated 5 days ago</text>
+  
+  <rect x="80" y="270" width="640" height="40" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="100" y="295" font-family="Arial" font-size="14" fill="#0f172a">package.json</text>
+  <text x="600" y="295" font-family="Arial" font-size="12" fill="#64748b">Updated 7 days ago</text>
+  
+  <rect x="80" y="310" width="640" height="40" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="100" y="335" font-family="Arial" font-size="14" fill="#0f172a">README.md</text>
+  <text x="600" y="335" font-family="Arial" font-size="12" fill="#64748b">Updated 2 days ago</text>
+  
+  <!-- Side stats -->
+  <rect x="470" y="90" width="280" height="50" fill="#f8fafc"/>
+  <text x="620" y="110" font-family="Arial" font-size="12" fill="#64748b">★ 42</text>
+  <text x="670" y="110" font-family="Arial" font-size="12" fill="#64748b">🍴 15</text>
+</svg>
