@@ -1,7 +1,5 @@
 # Tucker Peters Portfolio Website
 
-![Tucker Peters Portfolio](./photos/sigpiheadshot.png)
-
 A modern, responsive personal portfolio website built with Svelte, TypeScript, and Vite. Features a clean design with dark/light mode, animated UI components, and Netlify Forms integration.
 
 ## 🚀 Features
