@@ -82,4 +82,5 @@ Thumbs.db
 cypress/videos/
 cypress/screenshots/
 
-photos/
+# Keep photos in repository so they're visible on the website
+# photos/
