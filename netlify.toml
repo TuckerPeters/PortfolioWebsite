@@ -1,0 +1,12 @@
+ # Netlify configuration for building and deploying the Svelte + Vite SPA
+ [build]
+   # Build command as defined in package.json
+   command = "npm run build"
+   # Folder to publish (Vite outputs to 'dist' by default)
+   publish = "dist"
+
+ # Redirect all routes to index.html for client-side routing
+ [[redirects]]
+   from = "/*"
+   to = "/index.html"
+   status = 200
