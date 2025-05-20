@@ -34,6 +34,15 @@
     },
     {
       id: 3,
+      title: "ThoughtPartnr",
+      description: "ThoughtPartnr is an AI-driven platform designed to provide expert strategic guidance for small to medium-sized businesses (SMBs). The platform combines a modern Svelte frontend with Node.js and Firebase backend, leveraging advanced AI to deliver personalized business advice. It features payment integration through Stripe and utilizes OpenAI services to offer smart recommendations for business growth and strategy.",
+      url: "https://thoughtpartnr.com",
+      image: "/photos/thoguhtpartnr.png",
+      technologies: ["AI", "Svelte", "Firebase", "TypeScript", "Business Strategy"],
+      featured: true
+    },
+    {
+      id: 4,
       title: "AICloaker",
       description: "AICloaker is a professional Svelte template designed for developers. It provides a streamlined starting point for building web applications using the Svelte framework, focusing on performance and ease of use.",
       url: "https://aicloaker.com/",
@@ -42,7 +51,7 @@
       featured: false
     },
     {
-      id: 4,
+      id: 5,
       title: "StandardWebTemplate",
       description: "This GitHub repository contains a standard web template developed by Tucker Peters. Built with Svelte, the template serves as a foundational structure for web development projects, offering a clean and organized codebase to expedite the development process.",
       url: "https://github.com/TuckerPeters/StandardWebTemplate",
@@ -51,7 +60,7 @@
       featured: false
     },
     {
-      id: 5,
+      id: 6,
       title: "Habits of Mind AI",
       description: "Habits of Mind AI is a web application that integrates artificial intelligence to promote and develop effective thinking habits. The platform likely offers tools and resources to help users cultivate cognitive strategies that enhance learning and problem-solving skills.",
       url: "https://habitsofmindai.netlify.app/",
@@ -82,6 +91,14 @@
         project.technologies.includes(technology)
       );
     }
+  }
+
+  // Track which project descriptions are expanded
+  let expandedDescriptions: Record<number, boolean> = {};
+
+  // Toggle description expansion
+  function toggleDescription(projectId: number) {
+    expandedDescriptions[projectId] = !expandedDescriptions[projectId];
   }
 </script>
 
@@ -140,7 +157,17 @@
             {/each}
           </div>
           
-          <p class="project-description">{project.description}</p>
+          <div class="project-description-container">
+            <p class="project-description" class:expanded={expandedDescriptions[project.id]}>
+              {project.description}
+            </p>
+            <button 
+              class="toggle-description" 
+              on:click={() => toggleDescription(project.id)}
+            >
+              {expandedDescriptions[project.id] ? 'View Less' : 'View More'}
+            </button>
+          </div>
           
           <a href={project.url} target="_blank" rel="noopener noreferrer" class="view-project-button">
             View Project
@@ -330,30 +357,42 @@
     }
   }
   
+  .project-description-container {
+    margin-bottom: 1.5rem;
+  }
+  
   .project-description {
     font-size: 0.95rem;
     line-height: 1.5;
     color: var(--text-color);
     opacity: 0.8;
-    margin-bottom: 1.5rem;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    transition: all 0.3s ease;
+    
+    &.expanded {
+      -webkit-line-clamp: initial;
+    }
   }
-  
-  .view-project-button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: var(--primary-color);
-    color: white;
-    border-radius: 0.5rem;
+
+  .toggle-description {
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    background: none;
+    border: none;
+    padding: 0.25rem 0;
+    margin-top: 0.5rem;
+    cursor: pointer;
     font-weight: 500;
-    text-decoration: none;
-    transition: background-color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s ease;
     
     &:hover {
-      background-color: var(--secondary-color);
+      text-decoration: underline;
+      color: var(--secondary-color);
     }
   }
   

@@ -24,6 +24,13 @@
       description: "AI-integrated web app for developing effective thinking habits and cognitive strategies",
       image: "/photos/habitsofmind.png",
       url: "https://habitsofmindai.netlify.app/"
+    },
+    {
+      id: 4,
+      title: "ThoughtPartnr",
+      description: "AI-driven platform providing expert strategic guidance for small to medium-sized businesses",
+      image: "/photos/thoguhtpartnr.png",
+      url: "https://thoughtpartnr.com"
     }
   ];
   
@@ -592,11 +599,11 @@
   
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
     
     @media (max-width: 768px) {
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
     }
     
