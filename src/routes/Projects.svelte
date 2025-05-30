@@ -10,6 +10,7 @@
     image: string;
     technologies: string[];
     featured: boolean;
+    contractedWork?: boolean;
   }
   
   // Project data based on resources.txt
@@ -39,7 +40,8 @@
       url: "https://thoughtpartnr.com",
       image: "/photos/thoguhtpartnr.png",
       technologies: ["AI", "Svelte", "Firebase", "TypeScript", "Business Strategy"],
-      featured: true
+      featured: true,
+      contractedWork: true
     },
     {
       id: 4,
@@ -66,7 +68,8 @@
       url: "https://habitsofmindai.netlify.app/",
       image: "/photos/habitsofmind.png",
       technologies: ["AI", "EdTech", "Psychology"],
-      featured: true
+      featured: true,
+      contractedWork: true
     }
   ];
   
@@ -145,6 +148,9 @@
           />
           {#if project.featured}
             <span class="featured-badge">Featured</span>
+          {/if}
+          {#if project.contractedWork}
+            <span class="contracted-work-badge">Contracted Work</span>
           {/if}
         </div>
         
@@ -311,6 +317,20 @@
       font-size: 0.75rem;
       font-weight: 600;
       text-transform: uppercase;
+    }
+    
+    .contracted-work-badge {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background-color: #ff6b35;
+      color: white;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
     
     &:hover img {

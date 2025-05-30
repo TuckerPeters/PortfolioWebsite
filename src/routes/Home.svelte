@@ -23,14 +23,16 @@
       title: "Habits of Mind AI",
       description: "AI-integrated web app for developing effective thinking habits and cognitive strategies",
       image: "/photos/habitsofmind.png",
-      url: "https://habitsofmindai.netlify.app/"
+      url: "https://habitsofmindai.netlify.app/",
+      contractedWork: true
     },
     {
       id: 4,
       title: "ThoughtPartnr",
       description: "AI-driven platform providing expert strategic guidance for small to medium-sized businesses",
       image: "/photos/thoguhtpartnr.png",
-      url: "https://thoughtpartnr.com"
+      url: "https://thoughtpartnr.com",
+      contractedWork: true
     }
   ];
   
@@ -126,6 +128,9 @@
                 }
               }} 
             />
+            {#if project.contractedWork}
+              <span class="contracted-work-badge">Contracted Work</span>
+            {/if}
             <div class="project-overlay">
               <a href={project.url} target="_blank" rel="noopener noreferrer" class="view-project">
                 View Project
@@ -674,6 +679,21 @@
       object-fit: cover;
       transition: transform 0.5s ease;
     }
+  }
+  
+  .contracted-work-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: #ff6b35;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 3;
   }
   
   .project-overlay {
