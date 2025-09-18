@@ -1,6 +1,7 @@
 <script lang="ts">
   import { fade, fly } from 'svelte/transition';
   import { Link } from "svelte-routing";
+  import ArticleSlider from '../components/ArticleSlider.svelte';
   
   // Featured project data (highlighting your top projects)
   const featuredProjects = [
@@ -106,7 +107,10 @@
       </div>
     </div>
   </section>
-  
+
+  <!-- Articles Section -->
+  <ArticleSlider />
+
   <!-- Featured Projects Section -->
   <section class="featured-projects">
     <div class="section-header">
