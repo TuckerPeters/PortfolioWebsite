@@ -35,6 +35,16 @@
     },
     {
       id: 3,
+      title: "Habits of Mind AI",
+      description: "Habits of Mind AI is a web application that integrates artificial intelligence to promote and develop effective thinking habits. The platform likely offers tools and resources to help users cultivate cognitive strategies that enhance learning and problem-solving skills.",
+      url: "https://habitsofmindai.netlify.app/",
+      image: "/photos/habitsofmind.png",
+      technologies: ["AI", "EdTech", "Psychology"],
+      featured: true,
+      contractedWork: true
+    },
+    {
+      id: 4,
       title: "ThoughtPartnr",
       description: "ThoughtPartnr is an AI-driven platform designed to provide expert strategic guidance for small to medium-sized businesses (SMBs). The platform combines a modern Svelte frontend with Node.js and Firebase backend, leveraging advanced AI to deliver personalized business advice. It features payment integration through Stripe and utilizes OpenAI services to offer smart recommendations for business growth and strategy.",
       url: "https://thoughtpartnr.com",
@@ -44,7 +54,25 @@
       contractedWork: true
     },
     {
-      id: 4,
+      id: 5,
+      title: "W&M Business Major Advising",
+      description: "A business major advising platform for William & Mary students. This tool helps business students plan their academic path, track degree requirements, and make informed decisions about course selection and major concentrations.",
+      url: "https://github.com/TuckerPeters/W-M-Business-MajorAdvising",
+      image: "photos/Advising.png",
+      technologies: ["Education", "Academic Planning", "Web Development"],
+      featured: false
+    },
+    {
+      id: 6,
+      title: "W&M Athletics",
+      description: "An athletics platform for William & Mary that provides comprehensive sports information, team schedules, player statistics, and game results. This web application serves as a central hub for the William & Mary athletic community.",
+      url: "https://wmathletics.netlify.app/",
+      image: "photos/Athletics.png",
+      technologies: ["Web Development", "Sports", "Data Management"],
+      featured: false
+    },
+    {
+      id: 7,
       title: "AICloaker",
       description: "AICloaker is a professional Svelte template designed for developers. It provides a streamlined starting point for building web applications using the Svelte framework, focusing on performance and ease of use.",
       url: "https://aicloaker.com/",
@@ -53,24 +81,17 @@
       featured: false
     },
     {
-      id: 5,
+      id: 8,
       title: "StandardWebTemplate",
       description: "This GitHub repository contains a standard web template developed by Tucker Peters. Built with Svelte, the template serves as a foundational structure for web development projects, offering a clean and organized codebase to expedite the development process.",
       url: "https://github.com/TuckerPeters/StandardWebTemplate",
-      image: "/images/previews/standardwebtemplate.svg", // Using SVG since no screenshot available
+      image: "/images/previews/standardwebtemplate.svg",
       technologies: ["Svelte", "GitHub", "Web Development"],
       featured: false
     },
-    {
-      id: 6,
-      title: "Habits of Mind AI",
-      description: "Habits of Mind AI is a web application that integrates artificial intelligence to promote and develop effective thinking habits. The platform likely offers tools and resources to help users cultivate cognitive strategies that enhance learning and problem-solving skills.",
-      url: "https://habitsofmindai.netlify.app/",
-      image: "/photos/habitsofmind.png",
-      technologies: ["AI", "EdTech", "Psychology"],
-      featured: true,
-      contractedWork: true
-    }
+    
+    
+
   ];
   
   // Filter for featured projects
@@ -136,10 +157,10 @@
     {#each filteredProjects as project (project.id)}
       <div class="project-card" transition:fade>
         <div class="project-image">
-          <img 
-            src={project.image} 
-            alt={project.title} 
-            on:error={(e) => { 
+          <img
+            src={project.image}
+            alt={project.title}
+            on:error={(e) => {
               const img = e.currentTarget;
               if (img instanceof HTMLImageElement) {
                 img.src = '/images/previews/default-project.svg';
