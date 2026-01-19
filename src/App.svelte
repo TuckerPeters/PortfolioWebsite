@@ -8,7 +8,6 @@
   import ThemeToggle from './components/ThemeToggle.svelte';
   import Home from './routes/Home.svelte';
   import Projects from './routes/Projects.svelte';
-  import Experience from './routes/Experience.svelte';
   import Contact from './routes/Contact.svelte';
   
   export let url = "";
@@ -78,7 +77,6 @@
       <div class="content-wrapper" class:sidebar-open={isSidebarOpen}>
         <Route path="/" component={Home} />
         <Route path="/projects" component={Projects} />
-        <Route path="/experience" component={Experience} />
         <Route path="/contact" component={Contact} />
       </div>
     </main>
@@ -95,65 +93,72 @@
   :global(html) {
     /* Core colors */
     --primary-color: #2563eb;
-    --secondary-color: #4f46e5;
+    --secondary-color: #6366f1;
+    --accent-color: #ec4899;
     --primary-color-rgb: 37, 99, 235;
-    --secondary-color-rgb: 79, 70, 229;
+    --secondary-color-rgb: 99, 102, 241;
+    --accent-color-rgb: 236, 72, 153;
     --success-color: #10b981;
     --warning-color: #f59e0b;
     --danger-color: #ef4444;
-    
+
     /* Background & text colors */
-    --background-color: #ffffff;
+    --background-color: #fafbfc;
     --card-bg: #ffffff;
-    --secondary-bg: #f9fafb;
-    --text-color: #1f2937;
-    --text-muted: #6b7280;
-    --text-light: #9ca3af;
-    
+    --secondary-bg: #f1f5f9;
+    --text-color: #0f172a;
+    --text-muted: #64748b;
+    --text-light: #94a3b8;
+
     /* Border & shadows */
-    --border-color: #e5e7eb;
-    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    --hover-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    
+    --border-color: #e2e8f0;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    --hover-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+
     /* Layout & transitions */
     --sidebar-width: 250px;
-    --card-hover-transform: translateY(-5px);
+    --card-hover-transform: translateY(-8px);
     --section-padding: 5rem 0;
     --transition-speed: 0.3s;
-    
+
     /* Gradients */
     --gradient-start: #2563eb;
-    --gradient-end: #4f46e5;
+    --gradient-end: #6366f1;
     --gradient-overlay: rgba(255, 255, 255, 0.85);
+
+    /* Smooth scrolling */
+    scroll-behavior: smooth;
   }
   
   :global(html.dark) {
     /* Core colors - slightly brighter in dark mode */
     --primary-color: #3b82f6;
-    --secondary-color: #6366f1;
+    --secondary-color: #818cf8;
+    --accent-color: #f472b6;
     --primary-color-rgb: 59, 130, 246;
-    --secondary-color-rgb: 99, 102, 241;
+    --secondary-color-rgb: 129, 140, 248;
+    --accent-color-rgb: 244, 114, 182;
     --success-color: #34d399;
     --warning-color: #fbbf24;
     --danger-color: #f87171;
-    
+
     /* Background & text colors */
-    --background-color: #0f172a;
-    --card-bg: #1e293b;
-    --secondary-bg: #111827;
-    --text-color: #f3f4f6;
-    --text-muted: #9ca3af;
-    --text-light: #d1d5db;
-    
+    --background-color: #0a0f1a;
+    --card-bg: #151d2e;
+    --secondary-bg: #0f1623;
+    --text-color: #f1f5f9;
+    --text-muted: #94a3b8;
+    --text-light: #cbd5e1;
+
     /* Border & shadows */
     --border-color: #1e293b;
-    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
-    --hover-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-    
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+    --hover-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+
     /* Gradients */
     --gradient-start: #3b82f6;
-    --gradient-end: #6366f1;
-    --gradient-overlay: rgba(15, 23, 42, 0.85);
+    --gradient-end: #818cf8;
+    --gradient-overlay: rgba(10, 15, 26, 0.85);
   }
 
   :global(body) {
@@ -163,6 +168,14 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: var(--background-color);
+    color: var(--text-color);
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  :global(::selection) {
+    background: rgba(var(--primary-color-rgb), 0.2);
     color: var(--text-color);
   }
 

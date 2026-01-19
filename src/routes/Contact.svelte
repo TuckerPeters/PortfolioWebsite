@@ -37,19 +37,25 @@
     }
   ];
 
-  async function handleSubmit(event) {
+  async function handleSubmit(event: Event) {
     isSubmitting = true;
-    
+
     try {
       // Get form data for Netlify submission
-      const form = event.target;
+      const form = event.target as HTMLFormElement;
       const data = new FormData(form);
-      
+
+      // Convert FormData to URLSearchParams
+      const params = new URLSearchParams();
+      data.forEach((value, key) => {
+        params.append(key, value.toString());
+      });
+
       // Submit the form data to Netlify
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(data).toString()
+        body: params.toString()
       });
       
       if (!response.ok) {
@@ -94,12 +100,12 @@
         <p>Have a question or want to work together? Let me know!</p>
       </div>
       
-      <form 
+      <form
         name="contact"
         method="POST"
         data-netlify="true"
-        netlify-honeypot="bot-field"
-        on:submit|preventDefault={handleSubmit} 
+        data-netlify-honeypot="bot-field"
+        on:submit|preventDefault={handleSubmit}
         class="contact-form"
       >
         <!-- Netlify Forms Hidden Fields -->
