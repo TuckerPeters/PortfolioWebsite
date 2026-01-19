@@ -307,6 +307,7 @@
   /* ===== HERO SECTION ===== */
   .hero {
     min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -314,6 +315,13 @@
     position: relative;
     padding: 2rem;
     overflow: hidden;
+
+    @media (max-width: 480px) {
+      padding: 1.5rem 1rem;
+      min-height: auto;
+      padding-top: 2rem;
+      padding-bottom: 4rem;
+    }
   }
 
   .hero-content {
@@ -423,6 +431,7 @@
   .btn-primary, .btn-secondary {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.75rem;
     padding: 1rem 2rem;
     border-radius: 100px;
@@ -439,6 +448,11 @@
 
     &:hover .btn-arrow {
       transform: translateX(4px);
+    }
+
+    @media (max-width: 480px) {
+      width: 100%;
+      padding: 0.9rem 1.75rem;
     }
   }
 
@@ -546,6 +560,10 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     animation: fadeInUp 1s ease 1.5s both;
+
+    @media (max-width: 480px) {
+      display: none;
+    }
   }
 
   @keyframes fadeInUp {
@@ -621,6 +639,10 @@
     padding: 6rem 2rem;
     background: var(--secondary-bg);
     position: relative;
+
+    @media (max-width: 480px) {
+      padding: 4rem 1.25rem;
+    }
   }
 
   .about-grid {
@@ -722,6 +744,10 @@
     padding: 6rem 2rem;
     background: var(--secondary-bg);
     position: relative;
+
+    @media (max-width: 480px) {
+      padding: 4rem 1.25rem;
+    }
   }
 
   .projects-bento {
@@ -861,6 +887,10 @@
     position: relative;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     overflow: hidden;
+
+    @media (max-width: 480px) {
+      padding: 5rem 1.25rem;
+    }
   }
 
   .cta-content {
@@ -914,6 +944,13 @@
         transform: translateX(4px);
       }
     }
+
+    @media (max-width: 480px) {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      width: 100%;
+      justify-content: center;
+    }
   }
 
   /* ===== HIRE SECTION ===== */
@@ -921,6 +958,10 @@
     padding: 4rem 2rem 6rem;
     max-width: 900px;
     margin: 0 auto;
+
+    @media (max-width: 480px) {
+      padding: 3rem 1.25rem 4rem;
+    }
   }
 
   .hire-content {
@@ -967,6 +1008,7 @@
   .hire-button {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     padding: 1rem 2rem;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
@@ -980,6 +1022,12 @@
     &:hover {
       transform: translateY(-3px);
       box-shadow: 0 8px 30px rgba(var(--primary-color-rgb), 0.4);
+    }
+
+    @media (max-width: 480px) {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      font-size: 0.95rem;
     }
   }
 </style>

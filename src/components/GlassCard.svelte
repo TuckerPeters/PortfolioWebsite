@@ -9,6 +9,7 @@
   let card: HTMLDivElement;
   let glareEl: HTMLDivElement;
   let isHovered = false;
+  let isTouchDevice = false;
 
   let rotateX = 0;
   let rotateY = 0;
@@ -16,8 +17,13 @@
   let glareY = 50;
   let glareOpacity = 0;
 
+  onMount(() => {
+    // Detect touch device
+    isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  });
+
   function handleMouseMove(e: MouseEvent) {
-    if (!tiltEnabled || !card) return;
+    if (!tiltEnabled || !card || isTouchDevice) return;
 
     const rect = card.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
@@ -96,6 +102,12 @@
 
     &.hovered {
       z-index: 10;
+    }
+
+    /* Disable 3D transforms on touch devices */
+    @media (hover: none) and (pointer: coarse) {
+      transform: none;
+      transform-style: flat;
     }
   }
 

@@ -37,7 +37,7 @@
       id: 3,
       title: "Habits of Mind AI",
       description: "Habits of Mind AI is a web application that integrates artificial intelligence to promote and develop effective thinking habits. The platform likely offers tools and resources to help users cultivate cognitive strategies that enhance learning and problem-solving skills.",
-      url: "https://habitsofmindai.netlify.app/",
+      url: "https://habitsofmindinstitute.org/",
       image: "/photos/habitsofmind.png",
       technologies: ["AI", "EdTech", "Psychology"],
       featured: true,
@@ -130,6 +130,7 @@
   <section class="projects-hero">
     <h1>My Projects</h1>
     <p>A collection of my work and development projects</p>
+    <p class="public-projects-note">These are my public projects. <a href="/contact">Contact me</a> to see private projects.</p>
   </section>
   
   <section class="filter-controls">
@@ -218,7 +219,7 @@
   .projects-hero {
     text-align: center;
     padding: 3rem 0;
-    
+
     h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
@@ -227,11 +228,30 @@
       color: transparent;
       font-weight: 700;
     }
-    
+
     p {
       font-size: 1.2rem;
       color: var(--text-color);
       opacity: 0.8;
+    }
+
+    .public-projects-note {
+      font-size: 0.95rem;
+      margin-top: 1rem;
+      color: var(--text-color);
+      opacity: 0.7;
+
+      a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: var(--secondary-color);
+          text-decoration: underline;
+        }
+      }
     }
   }
   
