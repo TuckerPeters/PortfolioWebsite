@@ -9,77 +9,198 @@
     description: string[];
     skills: string[];
   }
-  
-  // This data would normally come from your resume
-  // Since I haven't seen your full resume, I've created placeholder data
-  // You should replace this with your actual experience details
+
   const experiences: Experience[] = [
     {
       id: 1,
-      company: "GenEdu.co",
-      title: "Founder & Developer",
-      period: "2022 - Present",
+      company: "Niska LLC",
+      title: "Co-Founder",
+      period: "2025 - Present",
       description: [
-        "Developed an AI-powered educational platform that enhances learning through personalized tools",
-        "Built and implemented the AI Tutor for interactive, real-time tutoring across various subjects",
-        "Created the Quote Finder to assist in pinpointing key quotes for research",
-        "Optimized algorithms to provide tailored educational support"
+        "Co-founded an AI infrastructure company building vertical platforms across defense, financial services, real estate, and politics, including a financial services joint venture valued at $6M.",
+        "Architected a multi-tenant AI backbone on AWS (ECS Fargate, Postgres with row-level security, Weaviate, Cognito MFA) running Claude on Bedrock for cited RAG, cutting search across 300,000+ page libraries from hours to seconds.",
+        "Migrated 281,857 client documents with 0 missing and drove weekly use by all 15 staff at the first production tenant.",
+        "Deployed an on-prem GovCon BD platform at WGS Systems that scores SAM.gov opportunities and drafts 10 to 15 page proposals in about 5 minutes.",
+        "Closed a development deal with a $20,000 Phase 1 fee plus equity, and led SOC 2 readiness for Capital Command with Vanta and 13 control changes."
       ],
-      skills: ["AI", "EdTech", "Web Development", "Product Management", "UX/UI Design"]
+      skills: ["AWS", "RAG", "PostgreSQL", "Weaviate", "Claude", "Bedrock"]
     },
     {
       id: 2,
-      company: "AI Club at William & Mary",
-      title: "Founding President",
-      period: "2021 - Present",
+      company: "Niska / DIU and Team Niska, Innovating for Defense (I4D)",
+      title: "Co-Creator & Research Lead",
+      period: "2026 - Present",
       description: [
-        "Founded and led a student organization dedicated to advancing artificial intelligence education",
-        "Fostered a community for students interested in AI through workshops and collaborative opportunities",
-        "Organized events and initiatives to explore AI technologies",
-        "Managed club operations, budget, and membership growth"
+        "Designed a leaderless swarm C2 layer for DIU's Massed Modular Aircraft area where aircraft confirm targets only when several independently agree, leaving no single point of failure.",
+        "Validated it across about 54,000 simulated missions, completing 97% of missions at 32 aircraft versus 35 to 40% for command-based designs and tracking targets about 4x as often.",
+        "Cut radio airtime per aircraft 2.1 to 2.7x with a 52-byte signed message, and model-checked the safety logic in TLA+ across 305,536 states with 0 violations.",
+        "Built dragonfly-style perception 6.8 to 24x faster than CNNs, and drafted 7 white papers for AFRL, SOFWERX, DARPA, Army DevX, and OSD SBIR.",
+        "Brought the work to W&M's I4D course as ACC-626 for sponsor HQ ACC, conducting 100+ interviews with US and Finnish operators, program leaders, and industry.",
+        "Traveled to Finland in Oct 2026 with a 5-student Common Mission Project team on a $10,000+ funded trip, meeting EW and NATO Innovation leaders and scouting a BVLOS test range."
       ],
-      skills: ["Leadership", "Event Management", "Artificial Intelligence", "Community Building", "Public Speaking"]
+      skills: ["TLA+", "Simulation", "Swarm C2"]
     },
     {
       id: 3,
-      company: "AI Cloaker",
-      title: "Co-founder & Co-developer",
-      period: "2023 - Present",
+      company: "Keystone Strategy (K.ATS Team), New York, NY",
+      title: "Summer Associate",
+      period: "Summer 2026",
       description: [
-        "Cofounder and co-developer with Graham Zemel"
+        "Built an automated image-generation and analysis pipeline that replaced planned manual testing, producing about 5,000 unique model outputs and 20,000+ image comparisons scored with SSIM, LPIPS, and CLIP similarity and analyzed statistically.",
+        "Helped develop a novel theory that model outputs generalized rather than memorized copyrighted works, contributing to reports used in expert testimony in litigation involving major image-generation companies and presenting findings to partners.",
+        "Analyzed about 144,000 server requests in an AI data scraping dispute, showing their 404 and 503 error patterns did not on their own show large-scale scraping.",
+        "Built citation-management, staffing, and knowledge management tools that were demoed to Keystone partners."
       ],
-      skills: ["Svelte", "Web Development", "UI/UX Design", "Documentation", "Technical Support"]
+      skills: ["SSIM", "LPIPS", "CLIP"]
+    },
+    {
+      id: 4,
+      company: "WGS Systems, MD",
+      title: "Digital Strategy & AI Infrastructure Intern",
+      period: "Spring 2026",
+      description: [
+        "Built a cloud, on-premise, and hybrid RAG deployment analysis for the Chief Growth Officer that shaped AI strategy across the firm's $500M+ federal contract portfolio.",
+        "Designed a CMMC and CUI compliant hybrid architecture and authored the deployment strategy report for firm leadership.",
+        "Built opportunity tracking across SAM.gov, GovWin, and EBI, redesigned the company website, and turned the relationship into Niska's ongoing defense revenue-share partnership."
+      ],
+      skills: ["RAG", "CMMC", "CUI"]
+    },
+    {
+      id: 5,
+      company: "GenEdu LLC",
+      title: "Founder & CEO",
+      period: "2024 - Spring 2026",
+      description: [
+        "Shipped 5+ client products for the Habits of Mind Institute, ThoughtPartnr, and others, including Project Clark Kent, an AI reading assistant for students with learning differences built on OCR and NLP pipelines.",
+        "Delivered white-label mobile integrations and custom AI web platforms across education, professional services, and SMB clients."
+      ],
+      skills: ["OCR", "NLP"]
+    },
+    {
+      id: 6,
+      company: "Royce Investment Partners, New York, NY",
+      title: "Summer Investment Analyst",
+      period: "Summer 2023",
+      description: [
+        "Authored an equity research report on Oxford Industries (OXM), a $1.5B small-cap retailer, covering competitive positioning, pricing trends, and downside risks, and presented recommendations to the portfolio manager and Principal."
+      ],
+      skills: ["Equity Research"]
+    },
+    {
+      id: 7,
+      company: "Cedar Point Yacht Club (CPYC), Westport, CT",
+      title: "Sailing Coach & Winter Dock Hand",
+      period: "2023 - 2025",
+      description: [
+        "Coached youth sailing skills, safety, and team racing, led training sessions, and supported club operations and members."
+      ],
+      skills: ["Sailing"]
     }
-    // Add more experiences from your resume
   ];
-  
-  // Education data from resume
+
+  const extracurriculars: Experience[] = [
+    {
+      id: 1,
+      company: "AI Club, William & Mary",
+      title: "Founder & President",
+      period: "2025 - Present",
+      description: [
+        "Founded the university's first AI Club and grew it to 150+ members in one semester, recruiting faculty advisors including the Dean of Computer Science, Data Science, and Applied Physics and standing up club governance.",
+        "Raised $20,000 in sponsorships to launch the inaugural W&M AI Case Competition, and hosted speakers Robi Rahman (MIRI) and Kent Rollins (CPO, General Intuition), an MBA Vibe Coding workshop, and a weekly newsletter.",
+        "Built 5 campus AI tools including a Transfer Credit Evaluator, Pre-Major Advising Platform, W&M Research Database, an AI Cost Optimization Dashboard for Athletics, and a syllabus analysis tool for the STLI program.",
+        "Co-authored the club research deck \"How Can AI Assist in Commercial Real Estate?\" with Andrew Yowell, Jack Zamer, and Cate Hatfield."
+      ],
+      skills: ["AI"]
+    },
+    {
+      id: 2,
+      company: "Sponsored by Air Combat Command (ACC)",
+      title: "2026 AI Case-a-thon",
+      period: "Oct 24 to 25, 2026",
+      description: [
+        "Organized and ran the event with ACC Chief Scientist Dr. John Matyjas and Maj Gen (Ret.) Mark Matthews, covering applicant selection, the ACC data poisoning challenge, judge recruitment, a 100-point rubric, a SaaS pitch workshop, and a winner read-ahead for ACC leadership.",
+        "Drew 64 applicants for a roughly 50% acceptance rate, fielding 30 students in 11 teams before 11 judges competing for $10,000 in prizes, and raised $10,000 from Accenture for the 2026 event."
+      ],
+      skills: []
+    },
+    {
+      id: 3,
+      company: "Mason Investment Society, William & Mary",
+      title: "Portfolio Manager",
+      period: "2024 - Fall 2026",
+      description: [
+        "Co-led a $60K student fund (50+ members) and its industrials coverage, pitching public equities including Xylem (XYL) with DCF and comps models and weekly sector briefs.",
+        "Served earlier as Senior Analyst for Xylem and the industrials sector (2024 to 2025), including calls with Xylem investor relations."
+      ],
+      skills: ["DCF", "Comps", "Equity Research"]
+    }
+  ];
+
   const education = [
     {
       institution: "William & Mary",
-      degree: "Bachelor of Science in Computer Science",
-      concentration: "AI, Machine Learning, and Big Data",
-      period: "2024 - 2028",
+      degree: "B.A. Finance & Government",
+      period: "Expected 2028",
       details: [
-        "Relevant coursework: Machine Learning, Artificial Intelligence, Data Structures, Algorithms"
+        "GPA 3.67",
+        "Distinguished AI Student Fellow",
+        "Distinguished Financial Management Student",
+        "Dean's List",
+        "Sigma Pi Fraternity"
+      ]
+    },
+    {
+      institution: "Staples High School, Westport, CT",
+      degree: "Diploma",
+      period: "2024",
+      details: [
+        "GPA 3.93",
+        "AP Scholar with Distinction",
+        "President, Model UN",
+        "Captain, Varsity Sailing"
       ]
     }
-    // Add more education from your resume
   ];
-  
-  // Skills grouped by category
+
   const skillsByCategory = {
-    "Programming Languages": ["JavaScript", "TypeScript", "Python", "Svelte", "HTML", "CSS/SCSS"],
-    "Web Development": ["React", "Svelte", "Node.js", "Express", "RESTful APIs", "Frontend Design"],
-    "AI & Data": ["Machine Learning", "Natural Language Processing", "Data Analysis", "AI Integration"],
-    "Tools & Frameworks": ["Git", "GitHub", "VS Code", "Figma", "Netlify", "Vercel"]
+    "Technical": [
+      "Python",
+      "JavaScript",
+      "React",
+      "SvelteKit",
+      "FastAPI",
+      "PostgreSQL (pgvector, RLS)",
+      "Weaviate",
+      "AWS (ECS Fargate, RDS, S3, Cognito, Bedrock)",
+      "Terraform",
+      "Docker",
+      "RAG",
+      "LLM Orchestration",
+      "Claude API",
+      "TensorFlow",
+      "OCR",
+      "Unreal Engine",
+      "TLA+"
+    ],
+    "Finance": [
+      "Equity and DCF Modeling",
+      "Comps",
+      "Equity Research",
+      "Sector Analysis",
+      "Excel and Google Sheets",
+      "Public Speaking"
+    ],
+    "Certifications": [
+      "Certified Financial Literacy (WISE, 2024)",
+      "Registered Vendor, William & Mary Procurement Office"
+    ]
   };
 </script>
 
 <div class="experience-container" transition:fade>
   <section class="experience-hero">
     <h1>Experience & Skills</h1>
-    <p>My professional background and technical expertise</p>
+    <p>Roles, extracurriculars, education, and skills</p>
   </section>
   
 
@@ -97,6 +218,7 @@
                 <div class="experience-header">
                   <h3>{experience.title}</h3>
                   <span class="company">{experience.company}</span>
+                  <span class="period">{experience.period}</span>
                 </div>
                 
                 <ul class="experience-details">
@@ -116,6 +238,40 @@
         </div>
       </section>
       
+      <section class="work-experience">
+        <h2>Extracurriculars</h2>
+
+        <div class="timeline">
+          {#each extracurriculars as item (item.id)}
+            <div class="timeline-item" transition:fade>
+              <div class="timeline-marker"></div>
+
+              <div class="timeline-content">
+                <div class="experience-header">
+                  <h3>{item.title}</h3>
+                  <span class="company">{item.company}</span>
+                  <span class="period">{item.period}</span>
+                </div>
+
+                <ul class="experience-details">
+                  {#each item.description as detail}
+                    <li>{detail}</li>
+                  {/each}
+                </ul>
+
+                {#if item.skills.length}
+                  <div class="experience-skills">
+                    {#each item.skills as skill}
+                      <span class="skill-tag">{skill}</span>
+                    {/each}
+                  </div>
+                {/if}
+              </div>
+            </div>
+          {/each}
+        </div>
+      </section>
+
       <section class="education">
         <h2>Education</h2>
         
@@ -128,12 +284,9 @@
                 <div class="experience-header">
                   <h3>{edu.institution}</h3>
                   <span class="company">{edu.degree}</span>
+                  <span class="period">{edu.period}</span>
                 </div>
-                
-                <div class="education-concentration">
-                  Concentration: {edu.concentration}
-                </div>
-                
+
                 <ul class="experience-details">
                   {#each edu.details as detail}
                     <li>{detail}</li>
@@ -173,9 +326,13 @@
             <span class="github-icon"></span>
             GitHub
           </a>
-          <a href="mailto:contact@tuckerpeters.com" class="contact-link">
+          <a href="mailto:tucker@niska.ai" class="contact-link">
             <span class="email-icon"></span>
-            Email
+            tucker@niska.ai
+          </a>
+          <a href="mailto:trpeters@wm.edu" class="contact-link">
+            <span class="email-icon"></span>
+            trpeters@wm.edu
           </a>
         </div>
       </section>
@@ -356,13 +513,6 @@
       color: var(--text-color);
       opacity: 0.7;
     }
-  }
-  
-  .education-concentration {
-    font-size: 0.95rem;
-    font-weight: 500;
-    margin-bottom: 0.75rem;
-    color: var(--text-color);
   }
   
   .experience-details {

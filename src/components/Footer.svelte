@@ -7,9 +7,9 @@
   <div class="footer-content">
     <div class="footer-section brand">
       <h3 class="footer-logo">Tucker Peters</h3>
-      <p class="footer-tagline">AI Developer & Software Engineer</p>
+      <p class="footer-tagline">Co-Founder of Niska</p>
       <p class="footer-description">
-        Creating intelligent digital experiences through innovative technology solutions.
+        AI infrastructure for defense and enterprise. Finance and Government at William & Mary.
       </p>
     </div>
 
@@ -26,9 +26,9 @@
     <div class="footer-section projects">
       <h3>Featured Projects</h3>
       <ul>
-        <li><a href="https://genedu.co" target="_blank" rel="noopener noreferrer">GenEdu.co</a></li>
         <li><a href="https://aiclubwm.com" target="_blank" rel="noopener noreferrer">AI Club at W&M</a></li>
-        <li><a href="https://habitsofmindai.netlify.app" target="_blank" rel="noopener noreferrer">Habits of Mind AI</a></li>
+        <li><a href="https://genedu.co" target="_blank" rel="noopener noreferrer">GenEdu</a></li>
+        <li><Link to="/experience">Experience</Link></li>
       </ul>
     </div>
 
@@ -41,7 +41,7 @@
         <a href="https://www.linkedin.com/in/tucker-peters/" target="_blank" rel="noopener noreferrer" class="social-link">
           <span class="social-icon linkedin"></span>
         </a>
-        <a href="mailto:tuckerpeters@genedu.co" class="social-link">
+        <a href="mailto:tucker@niska.ai" class="social-link">
           <span class="social-icon email"></span>
         </a>
       </div>
@@ -49,7 +49,7 @@
   </div>
   
   <div class="footer-bottom">
-    <p>&copy; {currentYear} GenEdu LLC. All rights reserved.</p>
+    <p>&copy; {currentYear} Tucker Peters. All rights reserved.</p>
   </div>
 </footer>
 

@@ -1,6 +1,6 @@
 # Tucker Peters Portfolio Website
 
-A modern, responsive personal portfolio website built with Svelte, TypeScript, and Vite. Features a clean design with dark/light mode, animated UI components, and Netlify Forms integration.
+Personal portfolio for Tucker Peters, Co-Founder of Niska LLC. Built with Svelte, TypeScript, and Vite, with dark and light mode, animated UI components, and Netlify Forms.
 
 ## 🚀 Features
 
@@ -79,9 +79,9 @@ This template can be easily customized to create your own personal website:
 3. Modify color themes in `App.svelte`
 4. Add your own photos to the `/photos` directory
 
-## 📱 Hire Me!
+## Contact
 
-> **Like this website?** I'm available for hire to create a custom website for you! Contact me at tuckerpeters@genedu.co to discuss your project.
+tucker@niska.ai or trpeters@wm.edu
 
 ## 📄 License
 

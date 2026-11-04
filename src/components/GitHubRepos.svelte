@@ -1,13 +1,22 @@
-<script>
+<script lang="ts">
   import { onMount } from 'svelte';
-  
-  // Replace with your GitHub username
+
   const username = 'TuckerPeters';
-  
-  let repos = [];
+
+  type Repo = {
+    html_url: string;
+    name: string;
+    language: string | null;
+    description: string | null;
+    stargazers_count: number;
+    forks_count: number;
+    updated_at: string;
+  };
+
+  let repos: Repo[] = [];
   let loading = true;
-  let error = null;
-  
+  let error: string | null = null;
+
   onMount(async () => {
     try {
       loading = true;
@@ -19,13 +28,12 @@
       loading = false;
     } catch (e) {
       console.error('Error fetching GitHub repos:', e);
-      error = e.message;
+      error = e instanceof Error ? e.message : 'Request failed';
       loading = false;
     }
   });
-  
-  // Format date to be more friendly
-  function formatDate(dateString) {
+
+  function formatDate(dateString: string) {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
       year: 'numeric',
@@ -38,7 +46,7 @@
 <section class="github-repos-section">
   <div class="container">
     <h2 class="section-title">Recent GitHub Repositories</h2>
-    <p class="repo-note">Note: Most of my projects are private. Please reach out if you'd like to learn more about the cool stuff I'm working on!</p>
+    <p class="repo-note">Public repositories on GitHub.</p>
     
     {#if loading}
       <div class="loading">
@@ -72,11 +80,11 @@
             <div class="repo-desc">{repo.description || 'No description provided.'}</div>
             <div class="repo-meta">
               <div class="repo-stats">
-                <span class="repo-stars">⭐ {repo.stargazers_count}</span>
-                <span class="repo-forks">🍴 {repo.forks_count}</span>
+                <span class="repo-stars">{repo.stargazers_count} stars</span>
+                <span class="repo-forks">{repo.forks_count} forks</span>
               </div>
               <div class="repo-updated">
-                Updated: {formatDate(repo.updated_at)}
+                Updated {formatDate(repo.updated_at)}
               </div>
             </div>
           </div>
@@ -258,11 +266,9 @@
   }
 </style>
 
-<script context="module">
-  // Helper function to get language color
-  function getLanguageColor(language) {
-    // Common language colors
-    const colors = {
+<script context="module" lang="ts">
+  function getLanguageColor(language: string) {
+    const colors: Record<string, string> = {
       JavaScript: '#f1e05a',
       TypeScript: '#2b7489',
       HTML: '#e34c26',

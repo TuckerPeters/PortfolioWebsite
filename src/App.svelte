@@ -7,6 +7,7 @@
   import Toast from './components/Toast.svelte';
   import ThemeToggle from './components/ThemeToggle.svelte';
   import Home from './routes/Home.svelte';
+  import Experience from './routes/Experience.svelte';
   import Projects from './routes/Projects.svelte';
   import Contact from './routes/Contact.svelte';
   
@@ -76,6 +77,7 @@
       
       <div class="content-wrapper" class:sidebar-open={isSidebarOpen}>
         <Route path="/" component={Home} />
+        <Route path="/experience" component={Experience} />
         <Route path="/projects" component={Projects} />
         <Route path="/contact" component={Contact} />
       </div>

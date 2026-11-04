@@ -6,7 +6,6 @@
   import GlassCard from '../components/GlassCard.svelte';
   import ScrollReveal from '../components/ScrollReveal.svelte';
   import SectionDivider from '../components/SectionDivider.svelte';
-  import ArticleSlider from '../components/ArticleSlider.svelte';
 
   let mounted = false;
   let titleWords = ['Tucker', 'Peters'];
@@ -25,45 +24,43 @@
   const featuredProjects = [
     {
       id: 1,
-      title: "GenEdu.co",
-      description: "AI-powered educational platform with interactive tutoring and research tools",
-      image: "/photos/genedu.png",
-      url: "https://genedu.co",
-      gradient: "from-blue-500 to-cyan-400"
+      title: "Niska",
+      description: "Co-founded an AI infrastructure company building vertical platforms across defense, financial services, real estate, and politics.",
+      image: "/images/previews/work-cover.svg",
+      url: "/experience",
+      external: false
     },
     {
       id: 2,
-      title: "AI Club at William & Mary",
-      description: "Student organization advancing AI education and fostering a community of AI enthusiasts",
-      image: "/photos/aiclub.png",
-      url: "https://aiclubwm.com",
-      gradient: "from-violet-500 to-purple-400"
+      title: "Decentralized Swarm C2",
+      description: "Co-Creator and Research Lead on a leaderless swarm command and control layer for the Defense Innovation Unit and William & Mary's Innovating for Defense course.",
+      image: "/images/previews/work-cover.svg",
+      url: "/experience",
+      external: false
     },
     {
       id: 3,
-      title: "Habits of Mind AI",
-      description: "AI-integrated web app for developing effective thinking habits and cognitive strategies",
-      image: "/photos/habitsofmind.png",
-      url: "https://habitsofmindai.netlify.app/",
-      contractedWork: true,
-      gradient: "from-emerald-500 to-teal-400"
+      title: "William & Mary AI Club",
+      description: "Founded the university's first AI club, grew it to 150+ members in one semester, and organized the 2026 AI Case-a-thon sponsored by Air Combat Command.",
+      image: "/photos/aiclub.png",
+      url: "https://aiclubwm.com",
+      external: true
     },
     {
       id: 4,
-      title: "ThoughtPartnr",
-      description: "AI-driven platform providing expert strategic guidance for small to medium-sized businesses",
-      image: "/photos/thoguhtpartnr.png",
-      url: "https://thoughtpartnr.com",
-      contractedWork: true,
-      gradient: "from-orange-500 to-amber-400"
+      title: "GenEdu",
+      description: "Founded GenEdu and shipped client products through spring 2026, including Project Clark Kent, an AI reading assistant built on OCR and NLP.",
+      image: "/photos/genedu.png",
+      url: "https://genedu.co",
+      external: true
     }
   ];
 
   const skills = [
-    { name: "Frontend Development", icon: "code", description: "React, Svelte, Vue" },
-    { name: "Artificial Intelligence", icon: "brain", description: "ML, NLP, Computer Vision" },
-    { name: "UI/UX Design", icon: "design", description: "Figma, User Research" },
-    { name: "Full Stack Development", icon: "stack", description: "Node, Python, Cloud" }
+    { name: "AI Infrastructure", icon: "brain", description: "AWS, RAG, Claude, Weaviate" },
+    { name: "Software", icon: "code", description: "Python, JavaScript, SvelteKit, FastAPI" },
+    { name: "Defense Research", icon: "stack", description: "Swarm C2, TLA+, simulation" },
+    { name: "Finance", icon: "chart", description: "Equity research, DCF, comps" }
   ];
 </script>
 
@@ -91,14 +88,14 @@
         {#if subtitleVisible}
           <h2 class="hero-subtitle" in:fly={{ y: 30, duration: 600 }}>
             <span class="subtitle-line"></span>
-            AI Developer & Software Engineer
+            Co-Founder of Niska
             <span class="subtitle-line"></span>
           </h2>
         {/if}
 
         {#if descVisible}
           <p class="hero-description" in:fade={{ duration: 600 }}>
-            Creating intelligent digital experiences through innovative technology solutions
+            Building AI infrastructure for defense and enterprise. Finance and Government student at William & Mary.
           </p>
         {/if}
 
@@ -144,7 +141,7 @@
     <ScrollReveal animation="fade-up" delay={0}>
       <div class="section-header">
         <span class="section-label">About Me</span>
-        <h2>Building the Future with AI</h2>
+        <h2>Current Work</h2>
       </div>
     </ScrollReveal>
 
@@ -152,18 +149,17 @@
       <ScrollReveal animation="fade-right" delay={100}>
         <div class="about-text">
           <p class="lead">
-            I'm a dedicated AI Developer and Software Engineer with a passion for creating powerful,
-            user-friendly applications that leverage cutting-edge technology.
+            I am Co-Founder of Niska LLC and a Finance and Government student at William & Mary, expected 2028.
           </p>
           <p>
-            With expertise in web development and artificial intelligence, I've built several successful
-            projects including AI-powered educational platforms, professional web templates, and
-            community-focused initiatives.
+            Niska builds vertical AI platforms across defense, financial services, real estate, and politics.
+            I also serve as Co-Creator and Research Lead on a leaderless swarm command and control layer
+            for the Defense Innovation Unit, carried into William & Mary's Innovating for Defense course as Team Niska.
           </p>
           <p>
-            My experience as Founding President of the AI Club at William & Mary has sharpened my
-            leadership skills, allowing me to advance AI education and foster a community of students
-            passionate about artificial intelligence.
+            I founded and preside over the William & Mary AI Club, which grew to 150+ members in one semester
+            and ran the 2026 AI Case-a-thon sponsored by Air Combat Command. Earlier I founded GenEdu,
+            interned in digital strategy and AI infrastructure at WGS Systems, and spent summer 2026 at Keystone Strategy.
           </p>
         </div>
       </ScrollReveal>
@@ -186,22 +182,13 @@
     </div>
   </section>
 
-  <SectionDivider type="curve" flip={true} color="var(--background-color)" height={80} />
-
-  <!-- Articles Section -->
-  <ScrollReveal animation="fade-up">
-    <ArticleSlider />
-  </ScrollReveal>
-
-  <SectionDivider type="diagonal" color="var(--secondary-bg)" height={100} />
-
   <!-- Featured Projects Section -->
   <section class="projects-section">
     <ScrollReveal animation="fade-up">
       <div class="section-header centered">
         <span class="section-label">Portfolio</span>
         <h2>Featured Projects</h2>
-        <p class="section-description">A selection of my recent work in AI and web development</p>
+        <p class="section-description">Selected work in AI infrastructure, defense research, and education</p>
       </div>
     </ScrollReveal>
 
@@ -209,7 +196,12 @@
       {#each featuredProjects as project, i}
         <ScrollReveal animation="zoom" delay={i * 100}>
           <GlassCard tiltMax={8} scale={1.03}>
-            <a href={project.url} target="_blank" rel="noopener noreferrer" class="project-card project-{i + 1}">
+            <a
+              href={project.url}
+              target={project.external ? "_blank" : undefined}
+              rel={project.external ? "noopener noreferrer" : undefined}
+              class="project-card project-{i + 1}"
+            >
               <div class="project-image-container">
                 <img
                   src={project.image}
@@ -217,21 +209,18 @@
                   on:error={(e) => {
                     const img = e.currentTarget;
                     if (img instanceof HTMLImageElement) {
-                      img.src = '/images/previews/default-project.svg';
+                      img.src = '/images/previews/work-cover.svg';
                     }
                   }}
                 />
                 <div class="project-overlay"></div>
-                {#if project.contractedWork}
-                  <span class="contracted-badge">Contracted Work</span>
-                {/if}
               </div>
 
               <div class="project-content">
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 <span class="project-link">
-                  View Project
+                  {project.external ? "Visit Site" : "Read More"}
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M7 17L17 7M17 7H7M17 7V17"/>
                   </svg>
@@ -263,9 +252,9 @@
 
     <ScrollReveal animation="zoom">
       <div class="cta-content">
-        <span class="section-label light">Let's Connect</span>
-        <h2>Have a Project in Mind?</h2>
-        <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+        <span class="section-label light">Contact</span>
+        <h2>Get in Touch</h2>
+        <p>Email tucker@niska.ai or trpeters@wm.edu.</p>
         <Link to="/contact" class="cta-button">
           Start a Conversation
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -276,27 +265,6 @@
     </ScrollReveal>
   </section>
 
-  <!-- Hire Me Section -->
-  <section class="hire-section">
-    <ScrollReveal animation="fade-up">
-      <GlassCard tiltMax={5}>
-        <div class="hire-content">
-          <div class="hire-icon">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="2" y="3" width="20" height="14" rx="2"/>
-              <path d="M8 21h8M12 17v4"/>
-            </svg>
-          </div>
-          <h2>Need a Website Like This?</h2>
-          <p>I can build a custom website tailored to your personal brand or business needs.
-             From portfolio sites to complex web applications — I've got you covered.</p>
-          <Link to="/contact" class="hire-button">
-            Hire Me To Build Your Website
-          </Link>
-        </div>
-      </GlassCard>
-    </ScrollReveal>
-  </section>
 </div>
 
 <style lang="scss">
@@ -739,6 +707,10 @@
     mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01'/%3E%3C/svg%3E");
   }
 
+  .chart {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 19V5M4 19h16M8 17V11M12 17V7M16 17v-4'/%3E%3C/svg%3E");
+  }
+
   /* ===== PROJECTS SECTION ===== */
   .projects-section {
     padding: 6rem 2rem;
@@ -796,20 +768,6 @@
 
   .project-card:hover .project-overlay {
     opacity: 1;
-  }
-
-  .contracted-badge {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    background: linear-gradient(135deg, #f97316, #ea580c);
-    color: white;
-    padding: 0.4rem 0.9rem;
-    border-radius: 100px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
   }
 
   .project-content {
@@ -900,6 +858,16 @@
     max-width: 700px;
     margin: 0 auto;
 
+    .section-label {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 0.75rem;
+    }
+
     h2 {
       font-size: clamp(2rem, 5vw, 3.5rem);
       font-weight: 700;
@@ -953,81 +921,4 @@
     }
   }
 
-  /* ===== HIRE SECTION ===== */
-  .hire-section {
-    padding: 4rem 2rem 6rem;
-    max-width: 900px;
-    margin: 0 auto;
-
-    @media (max-width: 480px) {
-      padding: 3rem 1.25rem 4rem;
-    }
-  }
-
-  .hire-content {
-    padding: 3.5rem;
-    text-align: center;
-
-    @media (max-width: 480px) {
-      padding: 2rem;
-    }
-  }
-
-  .hire-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 2rem;
-    border-radius: 24px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    svg {
-      width: 40px;
-      height: 40px;
-      color: white;
-    }
-  }
-
-  .hire-content h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--text-color);
-    margin-bottom: 1rem;
-  }
-
-  .hire-content p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: var(--text-muted);
-    max-width: 600px;
-    margin: 0 auto 2rem;
-  }
-
-  .hire-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 2rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    font-weight: 600;
-    font-size: 1rem;
-    border-radius: 100px;
-    text-decoration: none;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 20px rgba(var(--primary-color-rgb), 0.3);
-
-    &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 30px rgba(var(--primary-color-rgb), 0.4);
-    }
-
-    @media (max-width: 480px) {
-      width: 100%;
-      padding: 1rem 1.5rem;
-      font-size: 0.95rem;
-    }
-  }
 </style>

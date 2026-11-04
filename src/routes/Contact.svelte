@@ -12,28 +12,29 @@
   let showSuccessMessage = false;
 
   const contactInfo = {
-    email: "tuckerpeters@genedu.co",
+    email: "tucker@niska.ai",
+    schoolEmail: "trpeters@wm.edu",
     linkedIn: "https://www.linkedin.com/in/tucker-peters/",
     github: "https://github.com/TuckerPeters",
-    location: "Williamsburg, VA | New York, NY"
+    location: "Westport, CT"
   };
-  
+
   const faqItems = [
     {
-      question: "What technologies do you specialize in?",
-      answer: "I specialize in modern web development with a focus on AI integration, using technologies like JavaScript/TypeScript, React, Svelte, Python, and various machine learning frameworks."
+      question: "What are you working on now?",
+      answer: "I am Co-Founder of Niska LLC, an AI infrastructure company building vertical platforms across defense, financial services, real estate, and politics. I am also Co-Creator and Research Lead on a leaderless swarm command and control layer with the Defense Innovation Unit and William & Mary's Innovating for Defense course."
     },
     {
-      question: "Are you available for freelance work?",
-      answer: "Yes, I'm available for freelance projects, particularly those involving AI integration, educational technology, and web development."
+      question: "Where do you study?",
+      answer: "William & Mary, B.A. Finance & Government, expected 2028. GPA 3.67. Distinguished AI Student Fellow, Distinguished Financial Management Student, Dean's List, and Sigma Pi Fraternity."
     },
     {
-      question: "How quickly do you respond to inquiries?",
-      answer: "I typically respond to all inquiries within 24-48 hours. For urgent matters, please indicate so in the subject line."
+      question: "What is the William & Mary AI Club?",
+      answer: "The university's first AI club. I founded it and serve as President. It grew to 150+ members in one semester and ran the 2026 AI Case-a-thon sponsored by Air Combat Command."
     },
     {
-      question: "Do you offer consulting services?",
-      answer: "Yes, I provide consulting services for AI implementation, educational technology solutions, and web development projects."
+      question: "How should I reach you?",
+      answer: "Email tucker@niska.ai or trpeters@wm.edu."
     }
   ];
 
@@ -88,7 +89,7 @@
     <div class="contact-hero-content">
       <h1 in:fly={{ y: 50, duration: 800, delay: 200 }}>Get In Touch</h1>
       <p class="subtitle" in:fly={{ y: 50, duration: 800, delay: 300 }}>
-        I'm always interested in new projects, collaborations, or just a friendly hello.
+        Notes about Niska, research, or the AI Club are welcome.
       </p>
     </div>
   </section>
@@ -97,7 +98,7 @@
     <div class="contact-form-section" in:fly={{ x: -50, duration: 800, delay: 400 }}>
       <div class="form-header">
         <h2>Send a Message</h2>
-        <p>Have a question or want to work together? Let me know!</p>
+        <p>Use the form or the email addresses on this page.</p>
       </div>
       
       <form
@@ -112,7 +113,7 @@
         <input type="hidden" name="form-name" value="contact" />
         <div hidden>
           <label>
-            Don't fill this out if you're human: <input name="bot-field" />
+            Leave this field blank <input name="bot-field" />
           </label>
         </div>
 
@@ -137,7 +138,7 @@
               name="email"
               bind:value={formData.email}
               required
-              placeholder="your.email@example.com"
+              placeholder="you@email.com"
             />
           </div>
         </div>
@@ -150,7 +151,7 @@
             name="subject"
             bind:value={formData.subject}
             required
-            placeholder="What's this about?"
+            placeholder="Niska, research, or the AI Club"
           />
         </div>
 
@@ -161,7 +162,7 @@
             name="message"
             bind:value={formData.message}
             required
-            placeholder="Tell me about your project, idea, or any questions you might have..."
+            placeholder="Your message"
             rows="6"
           ></textarea>
         </div>
@@ -178,7 +179,7 @@
         {#if showSuccessMessage}
           <div class="success-message" transition:fade>
             <span class="success-icon"></span>
-            Thanks for your message! I'll get back to you shortly.
+            Thanks for your message.
           </div>
         {/if}
       </form>
@@ -194,6 +195,7 @@
             <div class="info-content">
               <h3>Email</h3>
               <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
+              <a href={`mailto:${contactInfo.schoolEmail}`}>{contactInfo.schoolEmail}</a>
             </div>
           </div>
           
@@ -253,8 +255,8 @@
   
   <section class="cta-section" in:fly={{ y: 50, duration: 800, delay: 800 }}>
     <div class="cta-content">
-      <h2>Let's Create Something Amazing Together</h2>
-      <p>Ready to discuss your next project? I'm here to help turn your ideas into reality.</p>
+      <h2>Email</h2>
+      <p>tucker@niska.ai or trpeters@wm.edu.</p>
       <a href={`mailto:${contactInfo.email}`} class="cta-button">
         Start a Conversation
       </a>
@@ -500,6 +502,7 @@
       }
       
       a, p {
+        display: block;
         font-size: 0.95rem;
         color: var(--text-color);
         opacity: 0.8;
