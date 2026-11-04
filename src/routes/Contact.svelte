@@ -12,30 +12,12 @@
   let showSuccessMessage = false;
 
   const contactInfo = {
-    email: "tuckerpeters@genedu.co",
+    emails: ["trpeters@wm.edu", "tucker@niska.ai"],
+    phone: "203-810-8256",
     linkedIn: "https://www.linkedin.com/in/tucker-peters/",
     github: "https://github.com/TuckerPeters",
-    location: "Williamsburg, VA | New York, NY"
+    location: "Westport, CT"
   };
-  
-  const faqItems = [
-    {
-      question: "What technologies do you specialize in?",
-      answer: "I specialize in modern web development with a focus on AI integration, using technologies like JavaScript/TypeScript, React, Svelte, Python, and various machine learning frameworks."
-    },
-    {
-      question: "Are you available for freelance work?",
-      answer: "Yes, I'm available for freelance projects, particularly those involving AI integration, educational technology, and web development."
-    },
-    {
-      question: "How quickly do you respond to inquiries?",
-      answer: "I typically respond to all inquiries within 24-48 hours. For urgent matters, please indicate so in the subject line."
-    },
-    {
-      question: "Do you offer consulting services?",
-      answer: "Yes, I provide consulting services for AI implementation, educational technology solutions, and web development projects."
-    }
-  ];
 
   async function handleSubmit(event: Event) {
     isSubmitting = true;
@@ -86,9 +68,9 @@
 <div class="contact-container" transition:fade>
   <section class="contact-hero">
     <div class="contact-hero-content">
-      <h1 in:fly={{ y: 50, duration: 800, delay: 200 }}>Get In Touch</h1>
+      <h1 in:fly={{ y: 50, duration: 800, delay: 200 }}>Contact</h1>
       <p class="subtitle" in:fly={{ y: 50, duration: 800, delay: 300 }}>
-        I'm always interested in new projects, collaborations, or just a friendly hello.
+        Westport, CT. Email trpeters@wm.edu or tucker@niska.ai.
       </p>
     </div>
   </section>
@@ -96,8 +78,8 @@
   <section class="contact-main">
     <div class="contact-form-section" in:fly={{ x: -50, duration: 800, delay: 400 }}>
       <div class="form-header">
-        <h2>Send a Message</h2>
-        <p>Have a question or want to work together? Let me know!</p>
+        <h2>Send a message</h2>
+        <p>Use the form, or email either address directly.</p>
       </div>
       
       <form
@@ -112,7 +94,7 @@
         <input type="hidden" name="form-name" value="contact" />
         <div hidden>
           <label>
-            Don't fill this out if you're human: <input name="bot-field" />
+            Do not fill this out if you are human <input name="bot-field" />
           </label>
         </div>
 
@@ -150,7 +132,7 @@
             name="subject"
             bind:value={formData.subject}
             required
-            placeholder="What's this about?"
+              placeholder="Subject"
           />
         </div>
 
@@ -161,7 +143,7 @@
             name="message"
             bind:value={formData.message}
             required
-            placeholder="Tell me about your project, idea, or any questions you might have..."
+            placeholder="Message"
             rows="6"
           ></textarea>
         </div>
@@ -178,7 +160,7 @@
         {#if showSuccessMessage}
           <div class="success-message" transition:fade>
             <span class="success-icon"></span>
-            Thanks for your message! I'll get back to you shortly.
+            Thanks for your message. I will get back to you.
           </div>
         {/if}
       </form>
@@ -193,7 +175,17 @@
             <span class="info-icon email-icon"></span>
             <div class="info-content">
               <h3>Email</h3>
-              <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
+              {#each contactInfo.emails as email}
+                <a href={`mailto:${email}`}>{email}</a>
+              {/each}
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon phone-icon"></span>
+            <div class="info-content">
+              <h3>Phone</h3>
+              <a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a>
             </div>
           </div>
           
@@ -229,7 +221,7 @@
           <a href={contactInfo.github} target="_blank" rel="noopener noreferrer" class="social-link github">
             <span class="social-icon github-icon"></span>
           </a>
-          <a href={`mailto:${contactInfo.email}`} class="social-link email">
+          <a href={`mailto:${contactInfo.emails[0]}`} class="social-link email">
             <span class="social-icon email-icon"></span>
           </a>
         </div>
@@ -238,28 +230,6 @@
     </div>
   </section>
 
-  <section class="faq-section" in:fly={{ y: 50, duration: 800, delay: 600 }}>
-    <h2>Frequently Asked Questions</h2>
-    
-    <div class="faq-grid">
-      {#each faqItems as faq, i}
-        <div class="faq-card" transition:fade={{ delay: 700 + (i * 100) }}>
-          <h3>{faq.question}</h3>
-          <p>{faq.answer}</p>
-        </div>
-      {/each}
-    </div>
-  </section>
-  
-  <section class="cta-section" in:fly={{ y: 50, duration: 800, delay: 800 }}>
-    <div class="cta-content">
-      <h2>Let's Create Something Amazing Together</h2>
-      <p>Ready to discuss your next project? I'm here to help turn your ideas into reality.</p>
-      <a href={`mailto:${contactInfo.email}`} class="cta-button">
-        Start a Conversation
-      </a>
-    </div>
-  </section>
 </div>
 
 <style lang="scss">
@@ -500,6 +470,7 @@
       }
       
       a, p {
+        display: block;
         font-size: 0.95rem;
         color: var(--text-color);
         opacity: 0.8;
@@ -525,6 +496,10 @@
     mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z'/%3E%3C/svg%3E");
   }
   
+  .phone-icon {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z'/%3E%3C/svg%3E");
+  }
+
   .location-icon {
     mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z'/%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M15 11a3 3 0 11-6 0 3 3 0 016 0z'/%3E%3C/svg%3E");
   }
