@@ -11,7 +11,7 @@
         <img src="/photos/sigpiheadshot.png" alt="Tucker Peters" />
       </div>
       <h3 class="profile-name">Tucker Peters</h3>
-      <p class="profile-title">AI Developer & Software Engineer</p>
+      <p class="profile-title">Co-Founder of Niska</p>
     </div>
     
     <div class="nav-section">
@@ -19,20 +19,11 @@
       <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/projects">Projects</Link></li>
+        <li><Link to="/experience">Experience</Link></li>
         <li><Link to="/contact">Contact</Link></li>
       </ul>
     </div>
     
-    <div class="nav-section">
-      <h3>Projects</h3>
-      <ul>
-        <li><a href="https://genedu.co" target="_blank" rel="noopener noreferrer">GenEdu.co</a></li>
-        <li><a href="https://aiclubwm.com" target="_blank" rel="noopener noreferrer">AI Club at W&M</a></li>
-        <li><a href="https://aicloaker.com" target="_blank" rel="noopener noreferrer">AICloaker</a></li>
-        <li><a href="https://habitsofmindai.netlify.app" target="_blank" rel="noopener noreferrer">Habits of Mind AI</a></li>
-      </ul>
-    </div>
-
     <div class="nav-section">
       <h3>Connect</h3>
       <div class="social-links">
@@ -44,17 +35,13 @@
           <span class="linkedin-icon"></span>
           LinkedIn
         </a>
-        <a href="mailto:contact@tuckerpeters.com" class="social-link">
+        <a href="mailto:tucker@niska.ai" class="social-link">
           <span class="email-icon"></span>
           Email
         </a>
       </div>
     </div>
     
-    <!-- Removed resume download section -->
-    <div class="nav-section quote-section">
-      <p class="quote">"Learning never exhausts the mind." - Leonardo da Vinci</p>
-    </div>
   </nav>
 </aside>
 

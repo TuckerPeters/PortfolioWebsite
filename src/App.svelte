@@ -8,6 +8,7 @@
   import ThemeToggle from './components/ThemeToggle.svelte';
   import Home from './routes/Home.svelte';
   import Projects from './routes/Projects.svelte';
+  import Experience from './routes/Experience.svelte';
   import Contact from './routes/Contact.svelte';
   
   export let url = "";
@@ -77,6 +78,7 @@
       <div class="content-wrapper" class:sidebar-open={isSidebarOpen}>
         <Route path="/" component={Home} />
         <Route path="/projects" component={Projects} />
+        <Route path="/experience" component={Experience} />
         <Route path="/contact" component={Contact} />
       </div>
     </main>
